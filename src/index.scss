@@ -10,9 +10,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 250px;
+  margin-bottom: 3px;
 }
 
-.Button {
+.button {
   background-color: #f2f3f4;
   color: #999;
   font-size: 22px;
@@ -22,7 +23,7 @@ body {
   cursor: pointer;
 }
 
-.List {
+.content {
   border: 3px solid #53b1ac;
   border-radius: 3px;
   background-color: #5dc6c0;

@@ -8,6 +8,13 @@
   margin-top: 15px;
   position: absolute;
   top: 100%;
+}
+
+.Dropdown__popover--left {
+  left: 0;
+}
+
+.Dropdown__popover--center {
   left: 50%;
   transform: translateX(-50%);
 }

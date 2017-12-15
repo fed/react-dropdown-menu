@@ -1,8 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import classnames from 'classnames';
 import './Dropdown.scss';
 
 export default class Dropdown extends React.Component {
+  static defaultProps = {
+    align: 'center'
+  };
+
   state = {
     open: false
   };
@@ -39,9 +43,15 @@ export default class Dropdown extends React.Component {
       }
     });
     const popoverElement = React.cloneElement(this.props.children, {
-      className: `${this.props.children.props.className} Dropdown__popover ${
-        this.state.open ? 'Dropdown__popover--open' : ''
-      }`,
+      className: classnames(
+        this.props.children.props.className,
+        'Dropdown__popover',
+        {
+          'Dropdown__popover--open': this.state.open,
+          'Dropdown__popover--left': this.props.align === 'left',
+          'Dropdown__popover--center': this.props.align === 'center'
+        }
+      ),
       ref: node => {
         this.popoverRef = node;
       }
