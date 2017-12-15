@@ -49,7 +49,8 @@ export default class Dropdown extends React.Component {
         {
           'Dropdown__popover--open': this.state.open,
           'Dropdown__popover--left': this.props.align === 'left',
-          'Dropdown__popover--center': this.props.align === 'center'
+          'Dropdown__popover--center': this.props.align === 'center',
+          'Dropdown__popover--right': this.props.align === 'right'
         }
       ),
       ref: node => {

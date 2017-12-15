@@ -8,6 +8,11 @@
   margin-top: 15px;
   position: absolute;
   top: 100%;
+  z-index: 9999;
+}
+
+.Dropdown__popover--open {
+  display: inline-block;
 }
 
 .Dropdown__popover--left {
@@ -19,6 +24,6 @@
   transform: translateX(-50%);
 }
 
-.Dropdown__popover--open {
-  display: inline-block;
+.Dropdown__popover--right {
+  right: 0;
 }

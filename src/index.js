@@ -39,6 +39,18 @@ function Example() {
           </div>
         </Dropdown>
       </div>
+
+      <div className="container">
+        <Dropdown
+          align="right"
+          toggle={<button className="button">Toggle</button>}
+        >
+          <div className="content" style={{ minWidth: '300px' }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </Dropdown>
+      </div>
     </React.Fragment>
   );
 }
