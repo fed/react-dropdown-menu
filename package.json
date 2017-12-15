@@ -1,20 +1,29 @@
 {
   "name": "react-dropdown-menu",
   "version": "0.0.0",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "license": "MIT",
+  "author": "Federico Knüssel <fknussel@gmail.com>",
+  "repository": "https://github.com/fknussel/react-dropdown-menu.git",
   "scripts": {
     "start": "parcel src/index.html -p 6789",
-    "build": "parcel build src/index.js"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "build": "NODE_ENV=production rollup -c"
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.3",
     "babel-preset-react-app": "^3.1.0",
+    "cssnano": "^3.10.0",
     "node-sass": "^4.7.2",
-    "parcel-bundler": "^1.0.3"
+    "parcel-bundler": "^1.0.3",
+    "postcss": "^6.0.14",
+    "react-dom": "^16.2.0",
+    "rollup": "^0.52.1",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sass": "^0.5.3",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
   }
 }
