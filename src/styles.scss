@@ -1,0 +1,21 @@
+.Dropdown {
+  position: relative;
+}
+
+.Dropdown__toggle {
+}
+
+.Dropdown__popover {
+  display: none;
+  border: 3px solid #53b1ac;
+  border-radius: 3px;
+  background-color: #5dc6c0;
+  padding: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.Dropdown__popover--open {
+  display: inline-block;
+}
