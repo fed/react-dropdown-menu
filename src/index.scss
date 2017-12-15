@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.Button {
+  background-color: #f2f3f4;
+  color: #999;
+  font-size: 22px;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.List {
+  border: 3px solid #53b1ac;
+  border-radius: 3px;
+  background-color: #5dc6c0;
+  padding: 20px;
+  display: block;
+}

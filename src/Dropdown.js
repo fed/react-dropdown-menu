@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles.scss';
+import './Dropdown.scss';
 
 export default class Dropdown extends React.Component {
   state = {
@@ -21,9 +21,10 @@ export default class Dropdown extends React.Component {
 
   /* If clicked element is not in the dropdown menu children, close menu */
   handleClickOutside = event => {
+    const clickedOnToggleElement = event.target === this.toggleRef;
     const clickedOutside =
-      event.target !== this.popover && !this.popover.contains(event.target);
-    const clickedOnToggleElement = event.target === this.toggleElement;
+      event.target !== this.popoverRef &&
+      !this.popoverRef.contains(event.target);
 
     if (this.state.open && clickedOutside && !clickedOnToggleElement) {
       this.close();
@@ -33,24 +34,24 @@ export default class Dropdown extends React.Component {
   render() {
     const toggleElement = React.cloneElement(this.props.toggle, {
       onClick: this.state.open ? this.close : this.open,
-      ref: toggle => {
-        this.toggleElement = toggle;
+      ref: node => {
+        this.toggleRef = node;
       }
     });
     const popoverElement = React.cloneElement(this.props.children, {
-      className: `Dropdown__popover ${
+      className: `${this.props.children.props.className} Dropdown__popover ${
         this.state.open ? 'Dropdown__popover--open' : ''
       }`,
-      ref: popover => {
-        this.popover = popover;
+      ref: node => {
+        this.popoverRef = node;
       }
     });
 
     return (
-      <React.Fragment>
+      <span className="Dropdown">
         {toggleElement}
         {popoverElement}
-      </React.Fragment>
+      </span>
     );
   }
 }

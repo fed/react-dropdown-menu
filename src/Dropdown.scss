@@ -4,13 +4,12 @@
 
 .Dropdown__popover {
   display: none;
-  border: 3px solid #53b1ac;
-  border-radius: 3px;
-  background-color: #5dc6c0;
-  padding: 20px;
+  width: 100%;
+  margin-top: 15px;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .Dropdown__popover--open {
